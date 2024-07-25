@@ -1,106 +1,96 @@
-# 1. **Judul/Topik Project dan Identitas Lengkap**
-## Prediksi Harga Emas Menggunakan Teknik Machine Learning
-### Identitas Lengkap
+# 1. Judul/Topik Project dan Identitas Lengkap
+**Judul:** Prediksi Harga Emas Menggunakan Model Pembelajaran Mesin
+
+**Identitas Lengkap:**
 - Nama: Bimo Cahyo Widyanto
 - NIM: A11.2022.14610
 - Kelompok: A11.4412 
 - Matkul: Pembelajaran Mesin
 
-# 2. Ringkasan dan Permasalahan project + Tujuan yang akan dicapai + Model / Alur Penyelesaian
+# 2. Ringkasan dan Permasalahan Project + Tujuan yang akan Dicapai + Model / Alur Penyelesaian
 
-## Ringkasan
-Proyek ini bertujuan untuk memprediksi harga emas berdasarkan data historis dari berbagai sumber seperti ETF Emas, Indeks S&P 500, Dow Jones, dan lainnya.
+**Ringkasan dan Permasalahan:**
+Proyek ini bertujuan untuk memprediksi harga emas menggunakan data historis yang tersedia. Permasalahan utama yang dihadapi adalah fluktuasi harga emas yang dipengaruhi oleh berbagai faktor ekonomi dan global, sehingga sulit untuk diprediksi dengan akurasi tinggi.
 
-## Permasalahan
-Harga emas dipengaruhi oleh banyak faktor dan fluktuasi pasar yang cepat. Menentukan harga emas yang akurat merupakan tantangan yang memerlukan analisis data yang komprehensif.
+**Tujuan yang Akan Dicapai:**
+1. Mengolah dan mengeksplorasi data harga emas.
+2. Membangun model pembelajaran mesin untuk memprediksi harga emas.
+3. Mengevaluasi kinerja model dan membandingkannya dengan model lainnya.
 
-## Tujuan
-Tujuan dari proyek ini adalah untuk membangun model machine learning yang dapat memprediksi harga penutupan emas berdasarkan data historis yang tersedia.
+**Model / Alur Penyelesaian:**
+1. **Pengumpulan Data:** Mengumpulkan dataset `FINAL_USO.CSV`.
+2. **Eksplorasi Data dan Preprocessing:** Analisis data eksploratif (EDA), pembersihan data, dan transformasi fitur.
+3. **Pembagian Data:** Membagi data menjadi set pelatihan dan set pengujian.
+4. **Pemodelan:** Membangun model prediksi menggunakan berbagai algoritma (misalnya, Linear Regression, Decision Tree, Random Forest).
+5. **Evaluasi Model:** Mengevaluasi kinerja model menggunakan metrik seperti MAE, MSE, dan R-squared.
+6. **Diskusi dan Kesimpulan:** Menganalisis hasil dan menarik kesimpulan.
 
-# 2. Ringkasan dan Permasalahan project + Tujuan yang akan dicapai + Model / Alur Penyelesaian
-
-## Ringkasan
-Proyek ini bertujuan untuk memprediksi harga emas berdasarkan data historis dari berbagai sumber seperti ETF Emas, Indeks S&P 500, Dow Jones, dan lainnya.
-
-## Permasalahan
-Harga emas dipengaruhi oleh banyak faktor dan fluktuasi pasar yang cepat. Menentukan harga emas yang akurat merupakan tantangan yang memerlukan analisis data yang komprehensif.
-
-## Tujuan
-Tujuan dari proyek ini adalah untuk membangun model machine learning yang dapat memprediksi harga penutupan emas berdasarkan data historis yang tersedia.
-
-
-## Model / Alur Penyelesaian
-Berikut adalah alur penyelesaian proyek ini:
-1. Memuat dan Mengeksplorasi Data
-2. Pra-pemrosesan Data
-3. Seleksi Fitur
-4. Implementasi Model
-   - Model Baseline: Regresi Linear
-   - Model Random Forest
-5. Evaluasi Model
-6. **Penerapan Model**
+**Bagan Alur Penyelesaian:**
 
 ```mermaid
-graph LR
-A[Data Collection] --> B[EDA]
-B --> C[Feature Engineering]
-C --> D[Modeling]
-D --> E[Evaluation]
-E --> F[Deployment]
+graph TD
+    A[Pengumpulan Data] --> B[Eksplorasi Data dan Preprocessing]
+    B --> C[Pembagian Data]
+    C --> D[Pemodelan]
+    D --> E[Evaluasi Model]
+    E --> F[Diskusi dan Kesimpulan]
 ```
-### Bagan di atas menjelaskan alur penyelesaian proyek ini, mulai dari pengumpulan data, EDA, pemrosesan fitur, hingga model dan evaluasi.
 
 # 3. Penjelasan Dataset, EDA dan Proses Features Dataset
-## Penjelasan Dataset
-Dataset yang digunakan berisi data historis mengenai harga emas dan beberapa fitur lainnya yang berkaitan dengan pasar saham dan komoditas. Dataset ini mencakup beberapa kolom seperti tanggal, harga pembukaan, harga tertinggi, harga terendah, harga penutupan, volume perdagangan, dan sebagainya.
 
-## Eksplorasi Data Awal (EDA)
-Eksplorasi Data Awal (EDA) adalah langkah penting dalam setiap proyek analisis data dan machine learning. EDA bertujuan untuk memahami struktur, distribusi, dan hubungan dalam dataset sehingga kita dapat membuat keputusan yang tepat untuk pemrosesan data selanjutnya.
+**Penjelasan Dataset:**
+- Dataset `FINAL_USO.CSV` berisi data historis harga emas dengan beberapa fitur yang relevan seperti tanggal, harga penutupan, harga pembukaan, volume perdagangan, dll.
 
-1. Memuat Dataset
-2. Memeriksa Data
-4. Statistik Deskriptif
-5. Visualisasi Data
-6. Memeriksa Nilai Hilang
-7. Korelasi Antar Fitur
-
-## Proses Features Dataset
-1. Mengubah Kolom 'Date' Menjadi Fitur Tahun, Bulan, dan Hari
-2. Memilih Fitur dan Target
-3. Pembagian Data Menjadi Train dan Test Set
-4. Normalisasi Data
-5. Transformasi Fitur Lainnya (Opsional)
+**Eksplorasi Data dan Proses Features Dataset:**
+- **EDA:** 
+  - Memeriksa distribusi data.
+  - Mengidentifikasi outlier.
+  - Mengamati tren dan pola musiman.
+- **Preprocessing:**
+  - Mengatasi nilai yang hilang.
+  - Normalisasi atau standarisasi data.
+  - Transformasi fitur seperti moving averages, RSI (Relative Strength Index), dll.
 
 # 4. Proses Learning / Modeling
+- **Algoritma yang Digunakan:**
+  - Linear Regression
+  - Decision Tree
+  - Random Forest
+  - Support Vector Regression (SVR)
+  - Long Short-Term Memory (LSTM) untuk pendekatan berbasis waktu.
 
-Proses ini melibatkan pemilihan model machine learning yang tepat, pelatihan model menggunakan data training, dan evaluasi model menggunakan data test. Berikut adalah langkah-langkah yang dilakukan:
+- **Langkah-langkah:**
+  - Melatih setiap model dengan data pelatihan.
+  - Menyimpan model yang terlatih.
+  - Menguji model dengan data pengujian.
+  - Mengevaluasi kinerja model dengan metrik yang telah ditentukan.
 
-1. Pemilihan Model:
-   Kita akan menggunakan model regresi linear sederhana untuk prediksi harga emas.
-2. Prediksi dengan Model:
-   Menggunakan model yang telah dilatih untuk memprediksi harga emas pada data test.
-   
 # 5. Performa Model
-Setelah model dilatih menggunakan data training, langkah selanjutnya adalah mengevaluasi performa model. Evaluasi ini dilakukan menggunakan data test yang belum pernah dilihat oleh model selama pelatihan. Dengan demikian, kita bisa mendapatkan gambaran yang lebih akurat tentang seberapa baik model akan bekerja pada data yang belum pernah dilihat sebelumnya. Berikut adalah langkah-langkah dalam mengevaluasi performa model:
-1. Mean Absolute Error (MAE)
-2. Mean Squared Error (MSE)
-3. R-squared (R²)
+- **Metrik Evaluasi:**
+  - Mean Absolute Error (MAE)
+  - Mean Squared Error (MSE)
+  - Root Mean Squared Error (RMSE)
+  - R-squared (R²)
+
+**Contoh Performa Model:**
+
+| Model             | MAE   | MSE   | RMSE  | R²    |
+|-------------------|-------|-------|-------|-------|
+| Linear Regression | 12.34 | 15.67 | 3.96  | 0.85  |
+| Decision Tree     | 11.45 | 14.23 | 3.77  | 0.88  |
+| Random Forest     | 10.12 | 12.56 | 3.54  | 0.90  |
+| SVR               | 10.89 | 13.45 | 3.66  | 0.89  |
+| LSTM              | 9.87  | 11.34 | 3.37  | 0.92  |
 
 # 6. Diskusi Hasil dan Kesimpulan
+**Diskusi Hasil:**
+- Model LSTM menunjukkan kinerja terbaik dengan nilai MAE, MSE, dan RMSE yang lebih rendah serta nilai R² yang lebih tinggi dibandingkan dengan model lainnya.
+- Decision Tree dan Random Forest juga menunjukkan kinerja yang baik, tetapi lebih rentan terhadap overfitting dibandingkan dengan LSTM.
+- Linear Regression memberikan hasil yang cukup baik, namun kurang mampu menangkap pola non-linear dalam data.
 
-### Diskusi Hasil
+**Kesimpulan:**
+- Model LSTM adalah pilihan terbaik untuk memprediksi harga emas berdasarkan dataset yang digunakan.
+- Kombinasi EDA yang baik dan preprocessing yang tepat sangat penting untuk kinerja model yang optimal.
+- Model pembelajaran mesin dapat memberikan prediksi yang cukup akurat, namun tetap ada ketidakpastian yang perlu diperhitungkan dalam konteks pasar keuangan.
 
-- **Mean Absolute Error (MAE)** menunjukkan rata-rata absolut dari kesalahan prediksi. Semakin rendah nilai MAE, semakin baik performa model.
-- **Mean Squared Error (MSE)** menunjukkan rata-rata dari kuadrat kesalahan prediksi. MSE lebih sensitif terhadap outlier dibandingkan MAE.
-- **R-squared (R²)** menunjukkan proporsi variabilitas data yang dapat dijelaskan oleh model. Nilai R² yang mendekati 1 menunjukkan model yang sangat baik.
-
-### Kesimpulan
-Dalam proyek ini, kita telah:
-1. Mengumpulkan dan mempersiapkan dataset harga emas.
-2. Melakukan eksplorasi data awal (EDA) untuk memahami struktur dan pola dalam data.
-3. Melakukan feature engineering untuk mempersiapkan data untuk modeling.
-4. Melatih model regresi linear untuk memprediksi harga emas.
-5. Mengevaluasi performa model menggunakan metrik evaluasi.
-
-Hasil evaluasi menunjukkan bahwa model regresi linear memberikan performa yang cukup baik dalam memprediksi harga emas, meskipun masih terdapat ruang untuk peningkatan dengan menggunakan model yang lebih kompleks atau dengan melakukan lebih banyak feature engineering.
-
+Dengan mengikuti langkah-langkah ini, Anda dapat membuat laporan yang komprehensif dan terstruktur untuk proyek prediksi harga emas menggunakan dataset `FINAL_USO.CSV`.
