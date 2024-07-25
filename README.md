@@ -39,7 +39,7 @@ C --> D[Modeling]
 D --> E[Evaluation]
 E --> F[Deployment]
 ```
-Bagan di atas menjelaskan alur penyelesaian proyek ini, mulai dari pengumpulan data, EDA, pemrosesan fitur, hingga model dan evaluasi.
+### Bagan di atas menjelaskan alur penyelesaian proyek ini, mulai dari pengumpulan data, EDA, pemrosesan fitur, hingga model dan evaluasi.
 
 # 3. Penjelasan Dataset, EDA dan Proses Features Dataset
 ## Penjelasan Dataset
@@ -55,7 +55,7 @@ Eksplorasi Data Awal (EDA) adalah langkah penting dalam setiap proyek analisis d
 6. Memeriksa Nilai Hilang
 7. Korelasi Antar Fitur
 
-##Proses Features Dataset
+## Proses Features Dataset
 1. Mengubah Kolom 'Date' Menjadi Fitur Tahun, Bulan, dan Hari
 2. Memilih Fitur dan Target
 3. Pembagian Data Menjadi Train dan Test Set
