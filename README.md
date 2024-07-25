@@ -31,6 +31,15 @@ Tujuan dari proyek ini adalah untuk membangun model machine learning yang dapat 
 
 ## Model / Alur Penyelesaian
 Berikut adalah alur penyelesaian proyek ini:
+1. Memuat dan Mengeksplorasi Data
+2. Pra-pemrosesan Data
+3. Seleksi Fitur
+4. Implementasi Model
+   - Model Baseline: Regresi Linear
+   - Model Random Forest
+5. Evaluasi Model
+6. **Penerapan Model**
+
 ```mermaid
 graph LR
 A[Data Collection] --> B[EDA]
